@@ -1,0 +1,28 @@
+info:
+  name: Create Patients
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{doctor}}/patients/register"
+  body:
+    type: json
+    data: |-
+      {
+          "first_name": "shailush",
+          "last_name": "Karki",
+          "age": 25,
+          "address": "Brt-12",
+          "email": "harikarki@gmail.com",
+          "phone_number": "9876543211",
+          "password": "harikarki@12345",
+        "confirm_password": "harikarki@12345"
+        }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

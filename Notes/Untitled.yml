@@ -1,0 +1,22 @@
+info:
+  name: Untitled
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{doctor}}/notes"
+  body:
+    type: json
+    data: |-
+      {
+        "title": "Created note from api",
+        "contents": "This note was created using bruno software"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
