@@ -1,5 +1,5 @@
 info:
-  name: Untitled
+  name: login Patient
   type: http
   seq: 1
 
@@ -10,8 +10,8 @@ http:
     type: json
     data: |-
       {
-        "identifier": "ramrijal@gmail.com",
-        "password": "ramrijal@12345"
+        "identifier": "rameshkumar@gmail.com",
+        "password": "rameshkumar@12345"
       }
   auth: inherit
 

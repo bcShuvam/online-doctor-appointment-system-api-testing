@@ -1,0 +1,18 @@
+info:
+  name: Get users
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{doctor}}/users"
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZmlyc3RfbmFtZSI6IlJhbWVzaCIsImxhc3RfbmFtZSI6Ikt1bWFyIFNoYWgiLCJhZ2UiOjI5LCJkb2IiOiIyMDUwLTEwLTEwVDE4OjE1OjAwLjAwMFoiLCJhZGRyZXNzIjoiQnJ0LTEyIiwiZW1haWwiOiJyYW1lc2hrdW1hckBnbWFpbC5jb20iLCJwaG9uZV9udW1iZXIiOiI5ODc2NTQzMTAwIiwicHJvZmlsZV9pbWFnZSI6bnVsbCwicm9sZSI6InBhdGllbnQiLCJjcmVhdGVkX2F0IjoiMjAyNi0wNC0wNVQwMTo0NzoyNC4wMDBaIiwiaWF0IjoxNzc1NDgzMjgzLCJleHAiOjE3NzgwNzUyODN9.3P9zB1AZ_Z1QOU5412QObJdX0iv8dkNTrjqxEqZ2SUs
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

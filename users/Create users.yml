@@ -1,0 +1,30 @@
+info:
+  name: Create users
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{doctor}}/users/register"
+  body:
+    type: json
+    data: |-
+      {
+          "first_name": "Ramesh",
+          "last_name": "Kumar Shah",
+          "age": 29,
+          "address": "Brt-12",
+          "dob": "2050-10-11",
+          "email": "rameshkumar@gmail.com",
+          "phone_number": "9876543100",
+          "password": "rameshkumar@12345",
+          "role": "doctor",
+          "confirm_password": "rameshkumar@12345"
+        }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
