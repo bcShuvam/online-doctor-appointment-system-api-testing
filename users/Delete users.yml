@@ -5,7 +5,10 @@ info:
 
 http:
   method: DELETE
-  url: "{{doctor}}/patients/1"
+  url: "{{doctor}}/users/1"
+  headers:
+    - name: jwt
+      value: Bearer {{jwt}}
   auth: inherit
 
 settings:

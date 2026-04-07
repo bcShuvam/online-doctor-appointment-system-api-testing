@@ -10,16 +10,19 @@ http:
     type: json
     data: |-
       {
-          "first_name": "Ramesh",
-          "last_name": "Kumar Shah",
-          "age": 29,
-          "address": "Brt-12",
-          "dob": "2050-10-11",
-          "email": "rameshkumar@gmail.com",
-          "phone_number": "9876543100",
-          "password": "rameshkumar@12345",
-          "role": "doctor",
-          "confirm_password": "rameshkumar@12345"
+          "first_name": "Shuvam",
+          "last_name": "BC",
+          "province": "Koshi",
+          "district": "Morang",
+          "city": "Biratnagar",
+          "ward": 7,
+          "tole": "Hatkhola",
+          "dob_ad": "2020-01-01",
+          "email": "shuvambc@gmail.com",
+          "phone_number": "9876543102",
+          "role": "admin",
+          "password": "shuvambc@12345",
+          "confirm_password": "shuvambc@12345"
         }
   auth: inherit
 
