@@ -1,0 +1,25 @@
+info:
+  name: Create Categories
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{doctor}}/category"
+  headers:
+    - name: Authorization
+      value: Bearer {{jwt}}
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Cardiology",
+        "description": "Heart and blood pressure"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
