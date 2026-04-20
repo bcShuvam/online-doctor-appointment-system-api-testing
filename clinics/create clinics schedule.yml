@@ -1,0 +1,33 @@
+info:
+  name: create clinics schedule
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{doctor}}/clinics/1/schedule"
+  headers:
+    - name: Authorization
+      value: Bearer {{doctor_jwt_1}}
+  body:
+    type: json
+    data: |-
+      {
+        "schedules": [
+          {
+            "day_of_week": "friday",
+            "is_closed": false,
+            "open_time": "10:00:00",
+            "close_time": "17:00:00",
+            "break_start": "12:30:00",
+            "break_end": "13:15:00"
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

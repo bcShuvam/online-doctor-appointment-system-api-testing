@@ -1,0 +1,32 @@
+info:
+  name: Verify KYC Receptionists
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{doctor}}/receptionists/verify/2"
+  headers:
+    - name: Authorization
+      value: Bearer {{admin_jwt}}
+    - name: Authorization
+      value: Bearer {{recptionist_jwt_1}}
+      disabled: true
+  params:
+    - name: search
+      value: nita
+      type: query
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+        "reason": "Blurred document"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

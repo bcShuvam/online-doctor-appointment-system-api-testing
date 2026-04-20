@@ -1,14 +1,20 @@
 info:
-  name: Get users
+  name: KYC Status Reject
   type: http
-  seq: 2
+  seq: 4
 
 http:
-  method: GET
-  url: "{{doctor}}/users"
+  method: PUT
+  url: "{{doctor}}/admin-doctor-kyc/3/reject"
   headers:
     - name: Authorization
       value: Bearer {{admin_jwt}}
+  body:
+    type: json
+    data: |-
+      {
+        "reason": "Fake documents"
+      }
   auth: inherit
 
 settings:

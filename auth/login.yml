@@ -1,17 +1,17 @@
 info:
-  name: Untitled
+  name: login
   type: http
   seq: 1
 
 http:
   method: POST
-  url: "{{doctor}}/notes"
+  url: "{{doctor}}/auth/login"
   body:
     type: json
     data: |-
       {
-        "title": "Created note from api",
-        "contents": "This note was created using bruno software"
+        "identifier": "ganeshshah@gmail.com",
+        "password": "shuvambc@12345"
       }
   auth: inherit
 

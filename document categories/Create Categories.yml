@@ -1,0 +1,30 @@
+info:
+  name: Create Categories
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{doctor}}/document-categories"
+  headers:
+    - name: Authorization
+      value: Bearer {{admin_jwt}}
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Other Documents",
+        "description": "Any additional documents",
+        "min_files": 0,
+        "max_files": 5,
+        "requires_metadata": false,
+        "is_required": false,
+        "is_active": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

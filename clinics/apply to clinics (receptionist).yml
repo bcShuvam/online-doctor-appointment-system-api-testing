@@ -1,0 +1,28 @@
+info:
+  name: apply to clinics (receptionist)
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{doctor}}/clinics/apply"
+  headers:
+    - name: Authorization
+      value: Bearer {{doctor_jwt_1}}
+    - name: Authorization
+      value: Bearer {{recptionist_jwt_1}}
+    - name: Authorization
+      value: Bearer {{recptionist_jwt_2}}
+  body:
+    type: json
+    data: |-
+      {
+        "clinic_id": 1
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
