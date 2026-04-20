@@ -1,0 +1,7 @@
+info:
+  name: Admin Doctor KYC Verification
+  type: folder
+  seq: 10
+
+request:
+  auth: inherit

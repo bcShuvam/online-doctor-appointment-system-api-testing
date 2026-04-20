@@ -1,0 +1,27 @@
+info:
+  name: book appointment
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{doctor}}/appointments/book"
+  headers:
+    - name: Authorization
+      value: Bearer {{patient_jwt_1}}
+  body:
+    type: json
+    data: |-
+      {
+        "clinic_id": 1,
+        "appointment_date": "2026-04-20",
+        "appointment_time": "09:30:00",
+        "reason": "Fever and headache for 3 days"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

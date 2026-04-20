@@ -1,57 +1,58 @@
 info:
-  name: Create users
+  name: Admin Create User
   type: http
-  seq: 1
+  seq: 6
 
 http:
   method: POST
-  url: "{{doctor}}/users/register"
+  url: "{{doctor}}/users/admin/create-user"
+  headers:
+    - name: Authorization
+      value: Bearer {{admin_jwt}}
   body:
     type: multipart-form
     data:
-      - name: first_name
-        type: text
-        value: Bishnu
-      - name: last_name
-        type: text
-        value: Yadav
-      - name: gender
-        type: text
-        value: male
-      - name: dob_bs
-        type: text
-        value: 2038-08-12
-      - name: dob_ad
-        type: text
-        value: 1981-11-27
-      - name: province
-        type: text
-        value: Madhesh
-      - name: district
-        type: text
-        value: Dhanusha
-      - name: city
-        type: text
-        value: Janakpur
-      - name: ward
-        type: text
-        value: "9"
-      - name: tole
-        type: text
-        value: Ramananda Chowk
-      - name: email
-        type: text
-        value: dr.bishnuyadav@gmail.com
-      - name: phone_number
-        type: text
-        value: "9851000003"
       - name: profile_image
         type: file
         value:
-          - /Users/shuvambc/Downloads/albert-dera-ILip77SbmOE-unsplash.jpg
+          - /Users/shuvambc/Downloads/Green Simple Nature Lake With Name Desktop Wallpaper copy.png
+        disabled: true
+      - name: first_name
+        type: text
+        value: Ganesh
+      - name: last_name
+        type: text
+        value: Shah
+      - name: gender
+        type: text
+        value: male
+      - name: province
+        type: text
+        value: Koshi
+      - name: district
+        type: text
+        value: Morang
+      - name: city
+        type: text
+        value: Biratnagar
+      - name: ward
+        type: text
+        value: "10"
+      - name: tole
+        type: text
+        value: Mahendra chowk
+      - name: dob_ad
+        type: text
+        value: 2000-01-01
+      - name: email
+        type: text
+        value: ganeshshah@gmail.com
+      - name: phone_number
+        type: text
+        value: "9876543107"
       - name: role
         type: text
-        value: doctor
+        value: receptionist
       - name: password
         type: text
         value: shuvambc@12345
@@ -60,7 +61,8 @@ http:
         value: shuvambc@12345
       - name: category_id
         type: text
-        value: "4"
+        value: "1"
+        disabled: true
   auth: inherit
 
 settings:

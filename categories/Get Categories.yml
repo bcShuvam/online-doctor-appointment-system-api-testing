@@ -8,7 +8,7 @@ http:
   url: "{{doctor}}/category"
   headers:
     - name: Authorization
-      value: Bearer {{jwt}}
+      value: Bearer {{admin_jwt}}
   auth: inherit
 
 settings:

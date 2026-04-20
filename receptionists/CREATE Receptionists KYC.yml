@@ -1,0 +1,45 @@
+info:
+  name: CREATE Receptionists KYC
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{doctor}}/receptionists/submit"
+  headers:
+    - name: Authorization
+      value: Bearer {{admin_jwt}}
+      disabled: true
+    - name: Authorization
+      value: Bearer {{recptionist_jwt_1}}
+      disabled: true
+    - name: Authorization
+      value: Bearer {{recptionist_jwt_2}}
+  params:
+    - name: search
+      value: nita
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: citizenship_number
+        type: text
+        value: 07-333-123456
+      - name: issue_date
+        type: text
+        value: 2018-12-14
+      - name: issue_district
+        type: text
+        value: Morang
+      - name: citizenship_image
+        type: file
+        value:
+          - /Users/shuvambc/Downloads/Untitled design 1.40.23 AM.png
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

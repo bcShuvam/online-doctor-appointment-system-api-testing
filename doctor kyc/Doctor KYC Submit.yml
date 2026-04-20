@@ -1,0 +1,41 @@
+info:
+  name: Doctor KYC Submit
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{doctor}}/doctor-kyc/submit"
+  headers:
+    - name: Authorization
+      value: Bearer {{doctor_jwt_1}}
+      disabled: true
+    - name: Authorization
+      value: Bearer {{doctor_jwt_2}}
+  body:
+    type: json
+    data: |-
+      {
+      //   "user_id": 4,
+      //   "category_id": 4,
+        "nmc_registration_number": "NMC-1001",
+        "nmc_registration_date": "2018-05-10",
+        "years_experience": 5,
+        "status": "pending",
+        "is_submitted": true
+      //   "graduation_year": 2014,
+      //   "license_number": "LIC-98765",
+      //   "license_issue_date": "2015-07-01",
+      //   "license_expiry_date": "2025-07-01",
+      //   "current_hospital_clinic": "Norvic International Hospital",
+      //   "position": "General Physician",
+      //   "start_date": "2018-03-01",
+      //   "end_date": null
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,88 @@
+info:
+  name: Update user
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{doctor}}/users/2"
+  headers:
+    - name: Authorization
+      value: Bearer {{admin_jwt}}
+      disabled: true
+    - name: Authorization
+      value: Bearer {{doctor_jwt_1}}
+      disabled: true
+    - name: Authorization
+      value: Bearer {{patient_jwt_1}}
+  body:
+    type: multipart-form
+    data:
+      - name: profile_image
+        type: file
+        value:
+          - /Users/shuvambc/Downloads/aiony-haust-3TLl_97HNJo-unsplash.jpg
+      - name: first_name
+        type: text
+        value: Radha
+      - name: last_name
+        type: text
+        value: Dahal
+        disabled: true
+      - name: gender
+        type: text
+        value: female
+      - name: province
+        type: text
+        value: Koshi
+        disabled: true
+      - name: district
+        type: text
+        value: Morang
+        disabled: true
+      - name: city
+        type: text
+        value: Biratnagar
+        disabled: true
+      - name: ward
+        type: text
+        value: "10"
+        disabled: true
+      - name: tole
+        type: text
+        value: Mahendra chowk
+        disabled: true
+      - name: dob_ad
+        type: text
+        value: 2000-01-01
+        disabled: true
+      - name: email
+        type: text
+        value: radharajbanshi@gmail.com
+      - name: phone_number
+        type: text
+        value: "9861000002"
+        disabled: true
+      - name: role
+        type: text
+        value: receptionist
+        disabled: true
+      - name: password
+        type: text
+        value: shuvambc@12345
+        disabled: true
+      - name: confirm_password
+        type: text
+        value: shuvambc@12345
+        disabled: true
+      - name: category_id
+        type: text
+        value: "1"
+        disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

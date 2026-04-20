@@ -1,0 +1,37 @@
+info:
+  name: update clinics
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{doctor}}/clinics/1"
+  headers:
+    - name: Authorization
+      value: Bearer {{doctor_jwt_1}}
+      disabled: true
+    - name: Authorization
+      value: Bearer {{doctor_jwt_2}}
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Bagmati Care Clinic",
+      //   "description": "General health services",
+      //   "province": "Bagmati",
+      //   "district": "Kathmandu",
+      //   "city": "Kathmandu",
+      //   "ward": 5,
+      //   "tole": "Baneshwor",
+      //   "address": "Near XYZ Chowk",
+      //   "primary_phone_number": "9800000000",
+      //   "secondary_phone_number": "9811111111",
+        "email": "bagmaticlinic@example.com"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

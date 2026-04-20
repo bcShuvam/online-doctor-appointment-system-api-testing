@@ -1,0 +1,27 @@
+info:
+  name: Approve Reject clinics staff
+  type: http
+  seq: 7
+
+http:
+  method: PATCH
+  url: "{{doctor}}/clinics/staff/1"
+  headers:
+    - name: Authorization
+      value: Bearer {{doctor_jwt_1}}
+      disabled: true
+    - name: Authorization
+      value: Bearer {{doctor_jwt_2}}
+  body:
+    type: json
+    data: |-
+      {
+        "status": "active"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
