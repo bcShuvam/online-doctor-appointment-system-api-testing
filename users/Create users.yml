@@ -11,10 +11,10 @@ http:
     data:
       - name: first_name
         type: text
-        value: Bishnu
+        value: Shuvam
       - name: last_name
         type: text
-        value: Yadav
+        value: BC
       - name: gender
         type: text
         value: male
@@ -26,32 +26,32 @@ http:
         value: 1981-11-27
       - name: province
         type: text
-        value: Madhesh
+        value: Koshi
       - name: district
         type: text
-        value: Dhanusha
+        value: Morang
       - name: city
         type: text
-        value: Janakpur
+        value: Biratnagar
       - name: ward
         type: text
-        value: "9"
+        value: "7"
       - name: tole
         type: text
-        value: Ramananda Chowk
+        value: Hatkhola
       - name: email
         type: text
-        value: dr.bishnuyadav@gmail.com
+        value: bcshuvam@gmail.com
       - name: phone_number
         type: text
-        value: "9851000003"
+        value: "9841000005"
       - name: profile_image
-        type: file
-        value:
-          - /Users/shuvambc/Downloads/albert-dera-ILip77SbmOE-unsplash.jpg
+        type: text
+        value: ""
+        disabled: true
       - name: role
         type: text
-        value: doctor
+        value: patient
       - name: password
         type: text
         value: shuvambc@12345

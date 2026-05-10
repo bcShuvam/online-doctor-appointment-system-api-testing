@@ -5,7 +5,7 @@ info:
 
 http:
   method: PUT
-  url: "{{doctor}}/appointments/reject/2"
+  url: "{{doctor}}/appointments/confirm/1"
   headers:
     - name: Authorization
       value: Bearer {{patient_jwt_1}}

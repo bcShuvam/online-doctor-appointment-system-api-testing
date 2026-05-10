@@ -5,7 +5,7 @@ info:
 
 http:
   method: PUT
-  url: "{{doctor}}/admin-doctor-kyc/3/verify"
+  url: "{{doctor}}/admin-doctor-kyc/2/verify"
   headers:
     - name: Authorization
       value: Bearer {{admin_jwt}}
