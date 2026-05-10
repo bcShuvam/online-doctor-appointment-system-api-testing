@@ -1,0 +1,31 @@
+info:
+  name: Verify Payment
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{doctor}}/payment/complete-khalti-payment?pidx=BU8rPHuQZ4BSyo6y8ADcDd"
+  params:
+    - name: pidx
+      value: BU8rPHuQZ4BSyo6y8ADcDd
+      type: query
+  body:
+    type: json
+    data: |-
+      {
+        "pidx": "BU8rPHuQZ4BSyo6y8ADcDd",
+        "txnId": "LXWPGHhPGxrPLPiDyZQGEE",
+        "amount":1000,
+        "mobile": 9812345678,
+        "purchase_order_id": 1,
+        "purchase_order_name": "Doctor Appointment Payment",
+        "transaction_id": "LXWPGHhPGxrPLPiDyZQGEE"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

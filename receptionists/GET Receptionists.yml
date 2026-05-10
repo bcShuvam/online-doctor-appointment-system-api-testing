@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{doctor}}/receptionists"
+  url: "{{doctor}}/receptionists/all"
   headers:
     - name: Authorization
       value: Bearer {{admin_jwt}}

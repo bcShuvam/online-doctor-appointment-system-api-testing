@@ -14,6 +14,7 @@ http:
       value: Bearer {{doctor_jwt_1}}
     - name: Authorization
       value: Bearer {{patient_jwt_1}}
+      disabled: true
   auth: inherit
 
 settings:

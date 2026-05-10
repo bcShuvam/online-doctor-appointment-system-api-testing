@@ -1,17 +1,18 @@
 info:
-  name: login
+  name: Initialize payment
   type: http
   seq: 1
 
 http:
   method: POST
-  url: "{{doctor}}/auth/login"
+  url: "{{doctor}}/payment/initialize-khalti-payment"
   body:
     type: json
     data: |-
       {
-        "identifier": "bcshuvam@gmail.com",
-        "password": "shuvam@12345"
+        "item_id": 1,
+        "total_price": 110, 
+        "website_url": "http://localhost:8000"
       }
   auth: inherit
 

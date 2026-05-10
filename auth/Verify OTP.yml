@@ -1,17 +1,17 @@
 info:
-  name: login
+  name: Verify OTP
   type: http
-  seq: 1
+  seq: 4
 
 http:
   method: POST
-  url: "{{doctor}}/auth/login"
+  url: "{{doctor}}/auth/verify-otp"
   body:
     type: json
     data: |-
       {
-        "identifier": "bcshuvam@gmail.com",
-        "password": "shuvam@12345"
+        "email": "bcshuvam@gmail.com",
+        "otp": 449278
       }
   auth: inherit
 

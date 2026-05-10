@@ -15,7 +15,7 @@ http:
       {
         "clinic_id": 1,
         "appointment_date": "2026-04-20",
-        "appointment_time": "09:30:00",
+        "appointment_time": "10:00:00",
         "reason": "Fever and headache for 3 days"
       }
   auth: inherit
